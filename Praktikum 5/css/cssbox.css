@@ -1,0 +1,128 @@
+
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* BROWSER CONTAINER */
+.browser {
+    width: 100%;
+    min-height: 100vh;
+
+    border: 2px solid #777;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVIGATION BUTTONS */
+.browser-buttons {
+    display: flex;
+    gap: 8px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ADDRESS BAR */
+.address-bar {
+    flex: 1;
+
+    background-color: white;
+    border: 2px solid #888;
+
+    padding: 8px 12px;
+
+    color: #1685e5;
+    font-size: 15px;
+}
+
+/* MAIN CONTENT */
+.content {
+    flex: 1;
+
+    padding: 24px;
+
+    display: grid;
+
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 0.55fr 1fr 1fr;
+
+    grid-template-areas:
+        "banner banner"
+        "yellow1 orange"
+        "yellow2 blue";
+
+    gap: 20px 30px;
+}
+
+/* BANNER */
+.banner {
+    grid-area: banner;
+    background-color: #a9df96;
+    border: 2px solid #555;
+}
+
+/* YELLOW BOX */
+.box-yellow {
+    grid-area: yellow1;
+    background-color: #f4ed42;
+    border: 2px solid #555;
+}
+
+/* ORANGE BOX */
+.box-orange {
+    grid-area: orange;
+    background-color: #ff5b20;
+    border: 2px solid #555;
+}
+
+/* SECOND YELLOW BOX */
+.box-yellow.second {
+    grid-area: yellow2;
+}
+
+/* BLUE BOX */
+.box-blue {
+    grid-area: blue;
+    background-color: #43c9e8;
+    border: 2px solid #555;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 600px) {
+
+    .content {
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-rows:
+            120px
+            180px
+            180px;
+
+        grid-template-areas:
+            "banner banner"
+            "yellow1 orange"
+            "yellow2 blue";
+
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .browser-buttons {
+        font-size: 18px;
+    }
+
+    .address-bar {
+        font-size: 12px;
+    }
+}

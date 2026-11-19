@@ -1,0 +1,50 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    /* Body memusatkan galeri secara horizontal dan vertikal */
+    body {
+      font-family: "Times New Roman", serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Wadah utama: besar dan berada di tengah halaman */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 90%;
+      max-width: 1400px;
+      height: 85vh;
+    }
+
+    /* Setiap baris: foto tersusun horizontal */
+    .row {
+      display: flex;
+      gap: 12px;
+      flex: 1;
+    }
+
+    /* Setiap kotak foto berbagi lebar yang sama */
+    .item {
+      flex: 1;
+      background-color: #e0e0e0;
+      border: 3px solid #222;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
